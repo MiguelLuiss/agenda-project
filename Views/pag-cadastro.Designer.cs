@@ -39,6 +39,8 @@
             label3 = new Label();
             txtRedigiteSenha = new TextBox();
             btnCadastro = new Button();
+            txtUsuario = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -76,11 +78,12 @@
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(361, 37);
             txtTelefone.TabIndex = 3;
+            txtTelefone.TextChanged += txtTelefone_TextChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(547, 71);
+            pictureBox1.Location = new Point(632, 150);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(168, 300);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -103,6 +106,7 @@
             txtSenhaCadastro.Name = "txtSenhaCadastro";
             txtSenhaCadastro.Size = new Size(361, 37);
             txtSenhaCadastro.TabIndex = 6;
+            txtSenhaCadastro.TextChanged += txtSenhaCadastro_TextChanged;
             // 
             // label3
             // 
@@ -120,6 +124,7 @@
             txtRedigiteSenha.Name = "txtRedigiteSenha";
             txtRedigiteSenha.Size = new Size(361, 37);
             txtRedigiteSenha.TabIndex = 8;
+            txtRedigiteSenha.TextChanged += txtRedigiteSenha_TextChanged;
             // 
             // btnCadastro
             // 
@@ -132,11 +137,32 @@
             btnCadastro.UseVisualStyleBackColor = true;
             btnCadastro.Click += btnCadastro_Click;
             // 
+            // txtUsuario
+            // 
+            txtUsuario.Location = new Point(427, 84);
+            txtUsuario.Multiline = true;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(361, 37);
+            txtUsuario.TabIndex = 10;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(586, 49);
+            label4.Name = "label4";
+            label4.Size = new Size(47, 15);
+            label4.TabIndex = 11;
+            label4.Text = "Usuário";
+            // 
             // pag_cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(txtUsuario);
             Controls.Add(btnCadastro);
             Controls.Add(txtRedigiteSenha);
             Controls.Add(label3);
@@ -166,5 +192,7 @@
         private Label label3;
         private TextBox txtRedigiteSenha;
         private Button btnCadastro;
+        private TextBox txtUsuario;
+        private Label label4;
     }
 }
